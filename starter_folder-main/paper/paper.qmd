@@ -1,0 +1,86 @@
+---
+title: "STA304 Marriage License Statistics in 2024"
+author: 
+  - He Tianning
+thanks: "Code and data are available at: LINK."
+date: today
+date-format: long
+abstract: "Research the number of Marriage License Statistics in 2024 ."
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+
+data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+
+```
+
+
+# Introduction
+
+we Research the number of Marriage License Statistics in 2024, and use the data to get the distribution of that.
+
+
+# Data {#sec-data}
+
+Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+
+```{r}
+#| label: fig-bills
+#| fig-cap: Bills of penguins
+#| echo: false
+
+data |> 
+  ggplot(aes(x = date, y = marriage_licenses)) +
+  geom_point()+labs(title = "Distribution of Toronto Marriage in 2024",
+                    x = "Date", 
+                    y = "Marriage License")
+```
+
+
+
+# Results
+
+The graph above shows the distribution of the marriage licences.
+
+
+
+# Discussion
+
+## First discussion point {#sec-first-point}
+
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+
+## Second discussion point
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional data details
+
+
+
+
+\newpage
+
+
+# References
+
+url ={https://open.toronto.ca/dataset/marriage-licence-statistics/}
